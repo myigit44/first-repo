@@ -190,3 +190,119 @@ AWS CloudFormation, bulut ortamınızdaki tüm altyapı kaynakları için ortak 
 
 Örneğin, benim bir uygulamam var, bunu oluşturmak için 4 backend sunucu, 2 frontend sunucu, 2 de database sunucu kuruyorum. Sonra bunlardaki yük dağıtımını sağlamak adına loadbalancer servisi ile haşır neşir oluyorum. Bunun yanında buradaki dosyaları saklamak adına S3 servisinde bir şeyler oluşturuyorum. Bunların izlenmesi için CloudWatch ayarları yapıyorum. Buna benzer bir çok işlem yapıyorum. Ve bu işlemlerin tümünü bir sefer değil de haftada 5-10 defa yapmam gerekiyorsa bu yaptığım tüm işlemleri otomatize etmemize yarayan servis CloudFormation'dur.
 
+# AWS Autoscaling 
+
+AWS AutoScaling, uygulamalarınızı izler ve mümkün olan en düşük maliyetle sabit, öngörülebilir bir performans sağlamak için otomatik olarak ayarlar. AWS Auto Scaling’I kulanarak, birkaç serviste birden fazla kaynak için uygulama ölçeklemesini dakikalar içinde kurmanız kolaydır. Amazon EC2 instances ve Spot instances, Amazon ECS görevleri, Amazon DynamoDB tabloları ve dizinleri ve Amazon Aurora Replicationlarını otomatik ölçeklendirmenizi sağlar. AWS Auto Scaling ölçeklemeyi, performansı, maliyetleri veya aralarındaki dengeyi optimize etmenizi sağlayan önerilerle işinizi kolaylaştırır. Amazon EC2 örneklerinizi dinamik olarak ölçeklendirmek için zaten Amazon EC2 Otomatik Ölçekleme kullanıyorsanız, şimdi AWS Auto ile birleştirebilirsiniz. AWS Otomtik Ölçekleme ile, uygulamalarınız her zaman doğru zamanda doğru kaynaklara sahip olur. 
+
+Örnek olarak, dakikalar içinde yeni kaynaklar ekleyip, var olan kaynakları devreden çıkartabiliyor. Ve kullandığımız kadarını ödüyoruz. Misal uygulamamızın koştugu sunucu %80’den fazla CPU tüketiyorsa, bunun hemen yanına o an ki talebi karşılamak adına otomatik bir sunucu daha ekleyip talep azaldığında eklediği sunucuyu otomatik olarak silebilme işlemini Auto Scaling servisi yapıyor.
+
+# AWS Config
+
+AWS Config, AWS kaynaklarınızın konfigürasyonlarını denetlemenizi ve değerlendirmenizi sağlayan bir hizmettir. Config, AWS kaynak konfigürasyonlarınızı sürekli olarak izler ve kaydeder ve istenen konfigürasyonların değerlendirmesini otomatikleştimenizi sağlar. Config ile, yapılandırmalardaki değişiklikleri ve AWS kaynakları arasındaki ilişkileri, kaynakların geçmişiyle ilgili ayrıntılı raporları gözden geçirebilir ve dahili yönergelerinizde belirtilen yapılandırmalara karşı genel uyumunuzu belirleyebilirsiniz. Bu, denetim, güvenlik analizi, değişiklik yönetimi ve operasyonel sorun giderme işlemlerini basitleştirmenizi sağlar. 
+
+Diyelim ki, 20 tane sanal makineniz var. Bu makinelerde de diskler ve network kartları bağlı vs. Yani ortamda oluşturulmuş bir sisteminiz var. Daha bunun gibi birçok serviste birçok hizmetiniz var. Hepsi bir arada bir system oluşturdunuz. Peki bu systemin o anki durumu, o anki bir resmini çekme şansınız olsa, daha sonra bunun üzerinde yapılan her değişikliği görme imkanınız olsa hoş olmaz mı? Buna hem değişiklik yönetimi için ihtiyacınız var hem de sorun çıktığında system konfigürasyonunda yapılan bir değişiklik mi bu sorunu tetikledi gibi cevap bulabilmek için ihtiyacınız var. Bir nevi CloudTrail ama bunun konfigürasyon için olanıdır. 
+
+
+
+# AWS OpsWorks
+AWS Opsworks, Chef ve Puppet’nın yönetilen örneklerini sağlayan bir yönetim hizmetidir. Chef ve Puppet sunucularınızın konfigürasyonlarını ayarlamanıza izin veren platformlardır. 
+
+Altyapınızın kurulumunu, konfigürasyonlarını otomatize ederek hazırlamanızı sağlayan servistir.
+
+AWS Service Catalog
+AWS Hizmet Kataloğu, kuruluşarın AWS’de kullanım için onaylanmış BT Hizmetleri kataloglarını oluşturup yönetimlerine olanak tanır. Bu BT Hizmetleri, sanal makine görüntüleri, sunucular, yazılımlar ve veritabanlarından çok katmanlı uygulama mimarilerini tamamlamak için kullanılabilecek diğer servislere kadar her şeyi içerebilir. AWS Servis Kataloğu, BT servislerini konuşlandırmanıza ve uyumluluk gereksinimlerinize ulaşmanıza yardımcı olur.
+
+Örneğin, şirket çalışanlarım AWS kaynaklarını kullanabilsinler ama sadece benim izin verdiğim servis ve hizmetlerden yararlanabilrsinler gibi bir ayarlama yapmak isterseniz onu bu servisle halledebiliyoruz. Çalışanlarınızın kullanabileceği hizmetlerin olduğu bir katalog yaratarak bunun içinden kolayca seçim yapmalarına imkan tanıyorsunuz.
+
+# AWS System Manager
+AWS System Manager, AWS’de altyapınızın görünürlüğünü ve kontrolünü sağlar. Systems Manager, birleşik bir kullanıcı arayüzü sağlar, böylece birden fazla AWS hizmetinden operasyonel verileri görüntüleyebilir ve AWS kaynaklarınızdaki operasyonel görevleri otomatikleştirmenizi sağlar. Systems Manager ile, Amazon EC2 örnekleri, Amazon S3 bucketları, Amazon RDS örnekleri gibi kaynakları, izleme ve sorun giderme için uygulama verilerine ve kaynak gruplarınızla harekete geçirebilirsiniz.
+
+Bir çok sunucunuzu bir araya toplayıp tek bir ekrandan hepsine birden işletim sistemi güncellemesi geçmek gibi işlemleri bu servisle halledebiliyoruz. 
+
+
+
+
+
+
+# AWS Trusted Advisor
+
+Trusted Advisor ortamınızı optimize ederek maliyetleri azaltmanıza, performansı artırmanıza ve güvenliği artırmanıza yardımcı olacak çevrimiçi bir kaynak. Trusted Advisor, AWS’in tavsiye edilen alışkanlıklarını takip ederek kaynaklarınızı ayarlamanıza yardımcı olacak gerçek zamanlı rehberlik sağlar.
+
+ Olması gereken ve tavsiye edilen yol (Best Practice) 
+Sisteminizi tarayıp, AWS’in belirlediği best practice kriterlerine göre tavsiyelerde bulunur.
+
+# AWS Managed Services
+
+Tüm altyapı yönetimini outsource etmen için kullanabileceğin güvenilir ve sertifikalı partnerlere bu Managed Services üzerinden ulaşabileceğimiz bir sekmedir.
+
+# SECURİTY
+
+# AWS IAM - Identity and Access Management
+
+AWS IAM, AWS servislerine ve kaynaklarına erişimi güvenli bir şekilde yönetmenizi sağlar. IAM'yi kullanarak AWS kullanıcılarını ve gruplarını oluşturabilir ve yönetebilir ve AWS kaynaklarına erişmelerine izin vermek ve bunları reddetmek için izinleri kullanabilirsiniz.
+
+AWS'in kalbi olan bir yönetim sistemidir. AWS'ye giriş yapan hesaplar ve grupların yetkilendirmelerini bu servis ile yapılandırabiliyoruz.
+
+# Amazon Cognito
+
+Amazon Cognito, kullanıcı yaratma, oturum açma ve web-mobil uygulamalarınıza erişim sağlama işini hızlı ve kolay bir şekilde yönetmenizi sağlar. Amazon Cognito, milyonlarca kullanıcıya ölçeklendiriyor ve Facebook, Google ve Amazon gibi sosyal kimlik sağlayıcılarıyla ve SAML 2.0 üzerinden kurumsal kimlik sağlayıcılarıyla oturum açmayı destekliyor.
+
+AWS üzerinde çalışan bir mobil uygulama yazdığımızı düşünelim. Uygulamalarda kullanıcı bilgileri ile kayıt olmayı, facebook, gmail gibi hesaplarla kayıt olmayı sağlayan bir servistir.
+
+# AWS Secrets Manager
+
+AWS Secrets Manager, uygulamalarınıza, hizmetlerine ve BT kaynaklarınıza erişmek için gereken anahtarları korumanıza yardımcı olur. Hizmet, yaşam döngüsü boyunca veritabanı kimlik bilgilerini, API anahtarlarını ve diğer anahtarları kolayca döndürmenizi, yönetmenizi ve almanızı sağlar. Kullanıcılar ve uygulamalar, Secrets Manager API'lerine yapılan bir çağrıyla anahtarlara erişebilir ve bu da bu anahtarları uygulama içinde düz metin halinde saklayarak hassas bilgileri sabitleme ihtiyacını ortadan kaldırır.
+
+Şifreler ve şifre benzeri anahtarların güvenliğini sağlamak için kullanılır. 
+
+# Amazon GuardDuty
+
+Amazon GuardDuty, AWS hesaplarınızı ve iş yüklerinizi korumanıza yardımcı olmak için kötü amaçlı veya yetkisiz davranışları sürekli olarak izleyen bir tehdit algılama hizmetidir. Olağan dışı API çağrıları veya olası hesap uzlaşmalarını belirten potansiyel olarak yetkisiz dağıtımlar gibi etkinlikleri izler. GuardDuty ayrıca, potansiyel olarak tehlike altındaki örnekleri veya saldırganların keşiflerini de tespit eder.
+
+AWS kaynaklarınızı sürekli izleyerek olağan dışı ve tanımlı güvenlik ihlallerini size bildiren servistir. 
+
+# Amazon Inspector
+
+Amazon Inspector, AWS'de konuşlandırılan uygulamaların güvenliğini ve uyumluluğunu geliştirmeye yardımcı olan otomatik bir güvenlik değerlendirme hizmetidir. Amazon Inspector, güvenlik açıklarını veya en iyi uygulamalardan sapmaları otomatik olarak değerlendirir. Bir değerlendirmeyi yaptıktan sonra, Amazon Inspector, şiddet düzeyine göre önceliklendirilen ayrıntılı güvenlik bulguları listesi üretir. Bu bulgular, doğrudan veya Amazon Inspector konsolu veya API aracılığıyla sunulan ayrıntılı değerlendirme raporlarının bir parçası olarak incelenebilir.
+
+Türkçe anlamı müfettiştir. AWS'de barındırdığımız uygulamaların taranmasını ve olası güvenlik açıklarını tespit etme imkanı sağlayan servistir.
+
+# Amazon Macie
+
+Amazon Macie, AWS'de hassas verileri otomatik olarak bulmak, sınıflandırmak ve korumak için makine öğrenimini kullanan bir güvenlik hizmetidir. Amazon Macie, kişisel olarak tanımlanabilir bilgiler (PII) veya fikri mülkiyet gibi hassas verileri tanır ve size bu verilere nasıl erişildiğini veya taşındığını görünürlük sağlayan gösterge panoları ve uyarılar sağlar. Tam yönetilen hizmet, anomaliler için veri erişim etkinliğini sürekli olarak izler ve yetkisiz erişim veya istenmeyen veri sızıntıları riskini algıladığında ayrıntılı uyarılar üretir.
+
+Macie ile S3 servisinde herhangi bir hassas veri atılıp atılmadığını gözlemlemenizi sağlar. Sürekli S3'ü tarar ve örneğin kredi kartı bilgisinin şifrelenmemiş  bir şekilde bu serviste saklanıp saklanmadığını size bildirir.
+
+# AWS Single Sign-On 
+
+AWS Single Sign ON(SSO) çoklu AWS hesaplarına SSO erişimini merkezi olarak yönetmeyi kolaylaştıran bir bulut SSO hizmetidir. Kullanıcıların mevcut kurumsal kimlik bilgileriyle bir kullanıcı portalında oturum açmalarını ve atanmış tüm hesap ve uygulamalarına tek bir yerden erişmelerini sağlar. AWS SSO ile, AWS Kuruluşlarında merkezi olarak tüm hesaplarınıza SSO erişimini ve kullanıcı izinlerini kolayca yönetebilirsiniz.
+
+# AWS Certificate Manager
+
+AWS Sertifika Yöneticisi, AWS hizmetleri ve dahili bağlı kaynaklarınızla kullanım için genel vve özel Güvenli Yuva Katmanı / Aktarım Katmanı Güvenliği (SSL/TLS) sertifikalarını kolayca sağlamanıza, yönetmenize ve dağıtmanıza olanak sağlayan bir hizmettir. SSL/TLS sertifikaları, ağ iletişimini güvenceye almak ve internet ğzerşnden web sitelerinin kimliğini ve özel ağlardaki kaynakları oluşturmak için kullanılır. AWS Sertifika Yöneticisi, SSL/TLS sertifikalarının satın alınması, yüklenmesi ve yenilenmesi için zaman alıcı manuel süreci kaldırır.
+
+AWS'im sertifika sağlayıcısıdır. 
+
+# AWS CloudHSM - Hardware Security Module
+
+AWS CloudHSM, AWS Cloud üzerinde kendi şifreleme anahtarlarınızı kolayca oluşturmanızı ve kullanmanızı sağlayan bulut tabanlı bir donanım güvenlik modülüdür. CloudHSM ile FIPS 140-2 Seviye 3 onaylı HSM'leri kullanarak kendi şifreleme anahtarlarını yönetebilirsiniz.
+
+AWS dünyasına yolladığımız verileri bizden başka kimse göremesin dersek, burdaki yöntem verileri şifrelemek olacak. Bu yöntem için en kurumsal ve güvenli olanını kullanmak isterseniz  donanımsal bir HSM modülü kullanmanız gerekecek. 
+
+# AWS Directory Service
+
+AWS Microsoft AD olarak bilinen Microsoft Active Directory için AWS Dizin Hizmeti, dizin gerekliliğindeki iş yükleriniz ve AWS kaynaklarınızın AWS Bulutunda yönetilen Active Directory'yi kullanmasına olanak tanır. AWS Microsoft AD, Microsoft Active Directory'ye dayanmaktadır ve varolan Active Directory'nizdeki erileri bulutta senkronize etmenizi veya çoğaltmanızı gerektirmez. Standart Active Directory yönetim araçlarını kullanabilir ve Grup ilkesi ve tek oturum açma (SSO) gibi yerleşik Active Directory özelliklerinden yararlanabilirsiniz. AWS Microsoft AD ile Amazon EC2 ve Amazon RDS SQL sunucularınızı kolayca dizine katılabilir ve AWS Entreprise IT uygulamalarını Active Directory kullanıcıları ve grupları ile kullanabilirsiniz.
+
+ Bulutta kendi Active Directory hizmetimizi kullanmayı sağlıyor. 
+
+ # AWS WAF - Web Application Firewall
+
+ AWS WAF, web uygulamalarınızı yaygın olarak kullanılan ve güvenliği tehlikeye sokup veya aşırı kaynak tüketen web saldırılarına karşı koruyan bir web uygulamasıdır. AWS WAF, kişiselleştirilebilir web güvenlik kurallarını iletmek için kontrol sağlar. SQL injection veya cross site scripting gibi genel saldırı kalıplarını engellemk ve uygulamanız için özel tasarlanmış kurallar oluşturmak için AWS WAF kullanabilirsiniz. 
+
+ WAF ve Shield iki ayrı servistir. Ama içiçeler. WAF kullandığımız zaman Shield'in standart hizmetini de kullanmış oluyoruz. WAF AWS'de bulunan uygulamalarımızı SQL injection gibi temel saldırılara karşı koruyor. Shield ise ddos saldırılarına karşı koruma altına alan ddos engelleme hizmetidir. 
+
+ # AWS Artifact
+
+ AWS Artifact sizin için önemli olan uyumlulukla ilgili bilgiler için merkez kaynaktır. AWS'nin güvenlik ve uyumluluk raporlarına isteğe bağlı erişim sağlar.
+
+ 
