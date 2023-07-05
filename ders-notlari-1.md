@@ -305,4 +305,5 @@ AWS Microsoft AD olarak bilinen Microsoft Active Directory için AWS Dizin Hizme
 
  AWS Artifact sizin için önemli olan uyumlulukla ilgili bilgiler için merkez kaynaktır. AWS'nin güvenlik ve uyumluluk raporlarına isteğe bağlı erişim sağlar.
 
- 
+# APPLİCATİON INTEGRATION
+
