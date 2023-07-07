@@ -307,3 +307,104 @@ AWS Microsoft AD olarak bilinen Microsoft Active Directory için AWS Dizin Hizme
 
 # APPLİCATİON INTEGRATION
 
+# Amazon SQS - Simple Queue Service
+
+Amazon Simple Queue Service mikroservisleri, dağıtılmış sistemleri ve sunucu olmayan uygulamaları ölçeklendirmenize olanak taanıyan tam yönetilen bir mesajlaşma hizmetidir. SQS, karmaşık aracılık ve üst düzey yönetim gereken yazılımlar arası mesajlaşma işlemlerini basit ve etkili hale getirir.
+
+SQS bir mesaj kuyruk hizmetidir. Bir çok uygulama tek bir servis üzerinden değilde birden fazla servis ile birlikte oluşturuluyor. Bu servislerin birbirleriyle haberleşip, bibirlerine mesajlar taşımaları gerekiyor. Aynı uygulama içinde bulunan iki farklı servis arasında bir mesaj kutusu oldugunu düşünüp, ortak verileri orada tutup ordan işlemler yapılıyor gibi düşünebiliriz.
+
+Ortada kısa süreli işlem yapılacak bilgileri saklayan ve yönetilen servislere mesaj kuyruğu diyoruz.
+
+# Amazon SNS - Simple Notification Service
+
+Amazon Simple Notification Service, mesajların uç noktalara ve müşterilere abone olarak almalarını sağlamak için esnek, tamamen yönetilen bir hub/alt mesajlaşma ve mobil bildirimler servisidir. SNS ile, dağıtılmış sistemler ve hizmetler ve mobil cihazlar dahil olmak üzere çok sayıda aboneye mesaj gönderebilirsiniz. Tüm uç noktalarınıza her ölçekte bildirim göndermek, işletmek ve güvenilir şekilde göndermek kolaydır.
+
+Basit bildirim servisidir. E-mailden tutunda sms mesajına ya da android ve ios cihazlarda uygulamalar tarafından sizlere gönderilen servislere kadar tüm bildirimleri yaratmanızı ve yönetmenizi sağlayan servistir. Tüm AWS servisleri ile bağlantılı olup AWS'in mesajlaşma altyapısını da bu sağlar. 
+
+# Amazon SWF - Simple Workflow Service
+
+Amazon SWF, geliştiricilerin paralel veya sıralı adımlara sahip işleri oluşturmasına, çalıştırmasına ve ölçeklendirmesine yardımcı olur. Amazon SWF'yi bulutta tam olarak yönetilen bir durum izleyici ve görev koordinatörü olarak düşünebilirsiniz. 
+
+Tam olarak iş akış servisi diyebiliriz. Şirket için de bir departmanın bir satın alma isteği oldugunu dusunelim. İstek atıldıktan sonra satın alma ekranına düşecek ve o da işlemleri yaptıktan sonra geri istek gönderecek vs. gibi bir iş akış servisidir.
+
+# AWS Step Functions
+
+AWS Step Functions, birden fazla AWS hizmetini sunucusuz iş akışlarına koordine etmenize olanak tanır, böylece uygulamaları hızlı bir şekilde oluşturup güncelleyebilirsiniz. Step Functions kullnarak, AWS Lambda ve Amazon ECS'yi zengin özellikli uygulamalara kullanan iş akışları tasarlayabilir ve çalıştırabilirsiniz.
+
+Microservices mimarilerinde servislerin ardı ardına yada paralel çalışmalarını düzenlemenize yardımcı olacak servistir.
+
+# Amazon MQ 
+
+Amazon MQ, Apache ActiveMQ tabanlı bulutta bir message broker kurmayı ve işletmeyi kolaylaştıran yönetilen bir message broker hizmetidir.
+
+Bir nevi SQS servisinin işini yapan ama onun birçok eksiğini kapatan ve artık nerdeyse sektörde standart olmuş Apache MQ tabanlı bir message broker servisidir. Dağıtık uygulamalar yarattığımız zaman mecburen bu ve bune benzer mesaj kuyruklama sistemlerine ihtiyacımız oluyor. 
+
+# ANALYTICS
+
+# Amazon Athena 
+
+Amazon Athena, standart SQL kullanarak Amazon S3'teki verileri analiz etmeyi kolaylaştıran etkileşimli bir sorgu hizmetidir. Athena sunucusuzdur, bu yüzden yönetilecek bir altyapı yoktur ve sadece sizin çalıştırdığınız sorguları ödersiniz.
+
+S3 içerisindeki çok büyük veriler içerisinden düzgün bir sorgulama sonucu almak için kullanılır. S3 içerisindeki verilerimizi SQL kullanarak analiz etmemize yarar.
+
+# Amazon EMR - Elastic MapReduce
+
+Amazon EMR çok büyük miktarda veriyi işlemek için kolay, hızlı ve düşük maliyetli bir yönetilen Hadoop framework hizmeti sunar. Amazon EMR'de Apache Spark, HBase, Presto ve Flink gibi diğer popüler dağıtılmış frameworkleri de ayarlayabilir ve Amazon S3 ve Amazon DynamoDB gibi diğer AWS veri mağazalrındaki verilerle etkileşimde bulunabilirsiniz.
+
+Hadoop'un AWS deki manage service hali EMR'dir. Big data analizi yapar.
+
+# Amazon CloudSearch
+
+Amazon CloudSearch, AWS Cloud'da web sitenizi veya uygulamanıza arama özelliği kazandırabileceğiniz yönetmek ve ölçeklendirmenin çok kolay ve düşük maliyetli olduğu bir yönetilen arama hizmetidir. Amazon CloudSearch, 34 dilde vurgulama, otomatik tamamlama ve coğrafi arama gibi popüler arama özelliklerini destekler.
+
+Bir mobil uygulama veya websitesin de kullanıcılarımın arama yapmalarını sağlayacak bir arama servisi eklemek istiyorum. Bunu ya oturur kodlarım, ya da CloudSearch gibi yönetilen bir servise bu işi paslarım. 
+
+# Amazon Elasticsearch Service
+
+Amazon Elasticsearch Service, log analizleri, tam metin araması, uygulama izleme ve daha gazlası için Elasticsearch'u yetleştirmeyi, korumayı, çalıştırmayı ve ölçeklendirmeyi kolaylaştırır. Elasticsearch'in kullanımı kolay API'leri  ve gerçek zamanlı analiz özellikleri, üretim iş yüklerinin gerektirdiği kullanılabilirliği, ölçeklenebiliriği ve güvenliği sağlar. Servis, Amazon Sanal Özel Bulut (VPC), AWS Anahtar Yönetim Hizmeti(KMS), Amazon Kinesis Veri Firehose, AWS Lambda, Amazon Cognito ve Amazon CloudWatch gibi AWS hizmetleri ile entegrasyon sağlar. Ham verilerden eyleme dönüştürülebilir bilgilere hızlı ve güvenli bir şekilde ulaşırsınız.
+
+Log arama ve analiz servisidir. Uygulamalarınızdaki logların içerisinden anlamlı verileri çıkartma ihtiyacınızı karşılar. 
+
+# Amazon Kinesis 
+
+Amazon Kinesis, gerçek zamanlı, akışlı verileri toplamak, işlemek ve analiz etme işlemini kolaylaştırmak için oluşturulan bir servistir. Bu sayede anında işinizle bilgi edinebilir ve yeni bilgilere hızlı bir şekilde tepki verebilirsiniz. Amazon Kinesis, uygulamalarınızın gereksinimlerini en iyi şekilde karşılayan araçları seçme esnekliğiyle birlikte, herhangi bir ölçekte akış verisini maliyeti etkin bir şekilde işlemek için temel yetenekler sunar. Amazon Kinesis ile video, ses, uygulama günlükleri, web sitesi tıklamaları ve IoT telemetri verileri gibi gerçek zamanlı verileri analiz edebilirsiniz.
+
+Eğer bizim analizleri ilgili iş gerçekleşirken yani ortada o büyük yığın oluşmadan canlı olarak akan o loglar üzerinde yapmamız gerekirse, özellikle IoT cihazları tarafından oluşturulan akan datanın anında analiz edilerek bu analize göre sonuçlar oluşturulması gereken çözümlere ihtiyaç oluyor. Bize de bunu Kinesis hizmeti sağlıyor.
+
+# Amazon QuickSight
+
+Amazon QuickSight, kurulumu kolay, hızlı ve bulutla çalışan bir iş zekası hizmetidir. Sizlere verinizi görselleştirme, ad hoc analiz yapma ve bunları şirket kullanıcılarınıza sunma imkanı sağlar. Gelişmiş analizler yapın ve herhangi bir tarayıcıdan veya mobil cihazdan erişilebilen çarpıcı görselleştirmeler ve zengin kontrol panelleri oluşturan analizler edinebilirsiniz.
+
+Şirketinizin verilerinden anlamlı sonuçlar çıkartma ve bu sonuçları analiz ederek kararlar alma işini iş zekası yazılımları ile yapıyoruz. Datamızı görselleştirebildiğimiz ekranlar sunan bir business intelligent (iş zekası) servisidir.
+
+# AWS Data Pipeline
+
+AWS Data Pipeline, farklı AWS sunucuları ve depolama himetleri arasında güvenilir bir şekilde işlem yapmanıza ve hareket etmenize yardımcı olan bir web hizmetidir. AWS Data Pipeline ile verilerinizi depolandığı yerden taşıyarak dönüştürebilir ve AWS hizmetlerinin yanı sıra Amazon S3, Amazon RDS, Amazon DynamoDB ve Amazon EMR'e de işleyebilirsiniz.
+
+Büyük bir datayı bulunduğu AWS servisinden bir diğer AWS servisine taşımak ve gerektiğinde taşıma sırasında çeşitli değişiklikler yapmak isterseniz kullanacağınız servis budur.  
+
+# AWS Glue 
+
+AWS Glue, müşterilerin analiz için verilerini hazırlamasını ve yüklemesini kolaylaştıran tamamen yönetilen bir çıkartma, dönüştürme ve yükleme (ETL) hizmetidir. AWS Yönetim Konsolu'nda birkaç tıklama ile bir ETL işi oluşturabilir ve çalıştırabilirsiniz.
+
+ETL = Çıkar, Dönüştür ve Yükle. Bir veritabanından verileri çekip üstüne eklemeler yapıp sonra bunları analiz etmek veya başka işlerde kullanmak için başka bir veritabanına yazmak için işimize yarayan servistir.
+
+# CUSTOMER ENGAGEMENT
+
+# Amazon Simple Email Service - SES
+
+Amazon Simple Email Service, dijital pazarlamacılara ve uygulama geliştiricilerine pazarlama, bildirim ve işlem e-postaları göndermelerine yardımcı olmak için tasarlanmış, bulut tabanlı bir e-posta gönderme hizmetidir. Her türlü iş için güvenilir ve uygun maliyetli bir hizmettir. Amazon SES'i mevcut uygulamalarınıza doğrudan entegre etmek için SMTP arayüzünü veya AWS SDK'larından birini kullanabilirsiniz. Bu nedenle, Amazon SES'in e-posta gönderme yeteneklerini, zaten kullandığınız yazılıma (örneğin, bilet sistemleri ve e-posta istemcileri) entegre edebilirsiniz.
+
+Kampanya e-postaları için kullanabileceğimiz etkin SAAS e-mail servisidir. Eğer bir uygulamanıza e-mail gönderme özelliği eklemek istiyorsanız bu servis ile halledebiliyoruz.
+
+# Amazon Connect
+
+Amazon Connect, herhangi bir işletmenin daha düşük maliyetle daha iyi müşteri hizmeti sunmasını kolaylaştıran, self servis, bulut tabanlı bir iletişim merkezi hizmetidir. Amazon Connect, milyonlarca müşteri görüşmesine güç sağlamak için dünyanın her yerinden Amazon tarafından müşteri hizmetleri işleri için kullanıyor. Amazon Connect'teki self servis grafik arabirimi, teknik olmayan kullanıcıların iletişim akışlarını tasarlamasınıi aracıları yönetmesini ve metrikleri izlemesini kolaylaştırır.
+
+Amazonun kendi müşteri hizmetleri altyapısında da kullandığı sistemi bir SAAS servisi haline getirerek dakikalar içerisinde firmanız için bir Call Center oluşturmanızı sağlıyor. Özellikle bu karmaşık iş için maddi gücü olmayan küçük firmalara büyük bir kolaylık.
+
+# Amazon Pinpoint
+
+Amazon PinPoint, e-posta, sms ve mobil push mesajları göndererek müşterilerinizle iletişim kurmanıza yardımcı olur. İster bir geliştirici, pazarlamacı veya iş kullanıcısı olun, hedeflenen iletileri (onaylama mesajları ve şifre saklama mesajları dahil) göndermek için Amazon Pinpoint'i kullanabilirsiniz.
+
+E-ticaret mobil uygulamanız var diyelim, yeni bir ürün çıkarttınız, atıyorum takım elbise için özel bir ütü. Şimdi sizin pazarlamacı arkadaşlar bu servisi kullanarak son 6 ay içerisinde takım elbise satın almış kullanıcılara mobil notification göndererek yeni takım elbise ütünüzün tanıtımını yapabilir. Yani bu servis iki iş yapıyor. İlki mobil uygulamalarınızın kullanımını analiz etmenize imkan veriyor. İkincisi de kampanya yaratmanıza olanak sağlıyor.
