@@ -408,3 +408,237 @@ Amazonun kendi müşteri hizmetleri altyapısında da kullandığı sistemi bir 
 Amazon PinPoint, e-posta, sms ve mobil push mesajları göndererek müşterilerinizle iletişim kurmanıza yardımcı olur. İster bir geliştirici, pazarlamacı veya iş kullanıcısı olun, hedeflenen iletileri (onaylama mesajları ve şifre saklama mesajları dahil) göndermek için Amazon Pinpoint'i kullanabilirsiniz.
 
 E-ticaret mobil uygulamanız var diyelim, yeni bir ürün çıkarttınız, atıyorum takım elbise için özel bir ütü. Şimdi sizin pazarlamacı arkadaşlar bu servisi kullanarak son 6 ay içerisinde takım elbise satın almış kullanıcılara mobil notification göndererek yeni takım elbise ütünüzün tanıtımını yapabilir. Yani bu servis iki iş yapıyor. İlki mobil uygulamalarınızın kullanımını analiz etmenize imkan veriyor. İkincisi de kampanya yaratmanıza olanak sağlıyor.
+ 
+ # AWS Mobile Hub
+
+ AWS mobile Hub, AWS servislerni kolayca yapılandırmanız için size tek bir yer sunar. Yapılandırılmış hizmetler hakkında bilgi depolayan bir bulut yapılandırma dosyası oluşturur.
+
+ Bir mobil uygulama yarattıgınız zaman eğer bu uygulama offline değilse mutlaka bir çok sunucu taraflı servisle konuşması gerekecektir. Bu servisleri konfigüre etmek için AWS hizmetlerinden zaten kolayca yararlanıyoruz. AWS bu işi kolay hale getirmek adına Mobile Hub adında bir arayüz sundu, bu bir servis değil. Arka taraftaki AWS servislerini görselleştirip size örnekler sunan bir arayüzdür.
+
+ # AWS AppSync
+
+ AWS AppSync, verileri gerçek zamanlı olarak otomatik olarak günceller ve yeniden bağlandıklarında çevrimdışı kullanıcılar için verileri günceller. AWS AppSync, duyarlı, işbirlikçi kullanıcı deneyimleri sunan işbirliğine dayalı mobil ve web uygulamaları oluşturmayı kolaylaştırır.
+
+ Gerçek zamanlı akan data ile çalışan mobil ve web uygulamaları örneğin twitter ı düşünün, yarattığınızda bundaki en önemli zorluklardan biri bu kullanıcıların sürekli güncellenen datayı çekmeleri ve bağlantı olmadığı zamanlarda offline çalışıp, bağlantı geri geldiğinde kaldıkları yerden son güncellemeri alıp geri devam etmeleridir. Developer olarak bu sorunu çözmek için AppSync size yardımcı olabilir.
+
+ # AWS DeviceFarm
+
+ AWS Device Farm, Android, iOS ve web uygulamalarını bir kerede birçok fiziksel cihazda gerçek zamanlı olarak test ediyor ve bunlarla etkileşime giriyor. Sorunları tespit etmek ve düzeltmek için videoi ekran görüntüleri, günlükler ve performans verilerine erişim sağlayabilirsiniz.
+
+ Bir mobil uygulama yaratıcısı olduğıunuzu düşünün. Bir oyun yarattınız diyelim ve bunu elinizin altındaki telefonla test ettiniz. Ama piyasada yüzlerce çeşit telefon ve tablet var. Kimi küçük kimi büyük ekran, kimi medyatek işlemcili kimi qualcomm işlemcili. Yani bu uygulama sizin telefonunuzda çalışıyor ama diğer telefonlarda nasıl çalışıyor.
+ DeviceFarm denilen servis arkada onlarca telefon ve tablet barındırıyor ve siz uygulamanızı bu cihazlara yükleyip test edebiliyorsunuz.
+
+ # DESKTOP & APP STREAMING
+
+ # Amazon WorkSpaces
+
+ Amazon WorkSpaces, yönetilen, güvenli bir bulut masaüstü hizmetidir. Sadece birkaç dakika içinde dünyanın her yerinde çalışan binlerce kullanıcınıza Windows veya Linux masaüstü bilgisayarları hızlı bir şekilde yaratmak için Amazon WorkSpaces'ı kullanabilirsiniz. Geleneksel masaüstlerine ve şirket içi VDI(Virtual Desktop - Sanal Masaüstü) çözümlerine kıyasla para biriktirmenize yardımcı olur. Başlattığınız WorkSpaces'ler için aylık veya saatlik ödeme yapabilirsiniz.
+
+ Kullanıcı bir uygulama ile bir sunucuya bağlanıp tüm işlerini bunun üzerinde yapıyor. Böylece tüm data orada duruyor, orada tutuluyor. Kullanıcıların tek tek makinelerini yönetmek zorunda kalmıyor ve daha güvenli oluyor. 
+
+ # Amazon AppStream 2.0
+
+ Amazon AppStream 2.0 tamamen yönetilen bir uygulama akışı hizmetidir. Masaüstü uygulamalarınızı AppStream 2.0'da yönetebilir ve bunları herhangi bir bilgisayardaki bir tarayıcıya teslim edebilirsiniz. Donanım veya altyapı edinmeden, tedarik etmeden ve çalıştırmadan dünya genelinde herhangi bir sayıda kullanıcıya kolayca ölçeklendirebilirsiniz.
+
+Bu da VDI yani WorkSpaces çözümüne çok benzeyen ama sadece uygulamalar için olan bir AWS servisidir. Herhangi bir desktop uygulamasını bir internet tarayıcısından erişilebilir hale çeviriyor ve bölyece dünyanın her yerinden kullanıcılarınıza uygulamayı kullandırma şansına erişiyorsunuz.
+
+# MEDIA SERVICES
+
+# Amazon Elastic Transcoder
+
+Amazon Elastic Transcoder, bulutta medya kod çevrimi yapıyor. Geliştiricilerin ve işletmelerin, medya dosyalarını kaynak biçimlerinden akıllı telefonlar, tabletler ve PC'ler gibi cihazlarda oynatılacak sürümlere dönüştürmesi için yüksek ölçüde ölçeklenebilir kullanımı kolay ve düşük maliyetli bir yol olarak tasarlanmıştır.
+
+Elimizde bir video dosyası var, biz bunu stream ederek bir çok cihazdan izlenebilir hale sokmak istiyoruz. Tablet ayrı boyut, pc ayrı boyut, telefon ayrı boyut derken elimizde bu dosyanın izleneceği onlarca çeşit cihaz var. Bu servis ise bize bulut hizmeti olarak video dosyalarını bu çeşitli cihazlarda izlenecek hale getirme şansı veriyor.
+
+# Amazon Kinesis Video Streams
+
+Amazon Kinesis Video Streams, bağlı cihazlardan analitik, makine öğrenimi (ML), oynatma ve diğer işlemler için AWS'ye güvenli bir şekilde video akışını kolaylaştırır. Kinesis Video Streams, milyonlarca cihazdan gelen video akış verilerini almak için gerekli tüm altyapıyı otomatik olarak provizyonlar ve ölçeklendirir. Ayrıca, akışlarınızdaki video verilerini depolar, şifreler ve endeksler ve kolay kullanımlı API'ler aracılığıyla verilerinize erişmenize olanak tanır.
+
+Günümüzün en revaşta konularından bir tanesi resim tanıma ve otomatik sınıflandırma. Bunu makine öğrenimi sayesinde gerçekleştirebiliyoruz. Bu makine öğrenimi modelleriyle video dosyalarında analiz yapabilmek için bu dosyaları düzgün formatta buluta atabilmemiz gerekiyor. Bunuda bize Kinesis Video Streams servisi sağlıyor.
+
+# Media Services
+
+AWS Medya Servisleri, Bulut'ta güvenilir, yüksek yayın kalitesinde video iş akışları oluşturmayı kolaylaştıran, tamamen yönetilen bir hizmet ailesidir. Bir medya ve eğlence şirketi, bir işletme, bir girişim veya bir devlet ajansı olsanız da, AWS Medya Hizmetleri gerekli zaman, çaba ve masraflar olmadan kolayca profesyonel kalitede medya deneyimleri oluşturmanıza olanak tanır. Geleneksel bir veri merkezinde uzman video ekipmanı çalıştırın.
+
+İçinde Elemental MediaConvert, Elemental MediaLive, Elemental MediaPackage, Elemental MediaStore, Elemental MediaTailor olarak 5 servis barındıran ve temelde sizin tüm medya depolama ve stream ihtiyaçlarınızı bulutta karşılayan bir hizmet ailesidir. Kısacası kendi youtube'nızı yaratmak isterseniz bakacağınız servisler bunlardır.
+
+# BUSINESS PRODUCTIVITY
+
+# Alexa for Business
+
+Günümüzde, insanlar zamanlarını çok fazla takvimlerini yönetmek, toplantılarda düzenlemeler yapmak veya bilgi aramak gibi sıkıcı işlerde harcıyorlar. Ancak Amazon Alexa, iş yerinde zeki bir yardımcı olarak hareket ederekbu sorunu çözmeye yardımcı olabilir. Alexa, insanların sesleriyle teknoloji ile etkileşimde bulunmalarına izin verir.
+
+Siri gibi olan bir Amazon sesli asistan var. Alexa for Business ise bu servisi firmaların hizmetine sunuyor. Örneğin, bu servis sayesinde bir otel tüm odalarına Amazon Alexa cihazları yerleştirerek müşterilerinin lambalarını açma kapama yada resepsiyondan sipariş verme gibi işlerini sesli komutlarla yapabilmelerine imkan tanıyabiliyor. 
+
+# Amazon Chime
+
+Amazon Chime, çevrimiçi toplantılar yaratabileceğiniz güvenli, kullanımı kolay bir iletişim servisidir. Amazon Chime'ı çevrimiçi toplantılar, video konferanslar, çağrılar, sohbet ve kuruluşunuzun içinde ve dışında içerik paylaşmak için kullanabilirsiniz.
+
+Webex, Zoom, Skype Business gibi şirket içi görüşmeler toplantılar yapılan araçları mutlaka duymuşsunuzdur. Chime'da bu dünyaya yeni katılan AWS'in haberleşme servisidir.
+
+# Amazon WorkDocs
+
+Amazon WorkDocs, AWS üzerinde çalışan, genişletilebilir bir SDK ile güvenli, tamamen yönetilen, içerik oluşturma, dosya işbirliği ve yönetim hizmetidir.
+
+Bir nevi OneDrive for Business yada Google Drive. Tamamen kurumsal müşterilere yönelik kurumsal dosyalarınızı bunun içinde güvenle saklayabilili, word, excel, powerpoint dosyalarını tarayıcınızdan düzenleyebilir ve kolayca şirket içi ve dışı ile paylaşabilirsiniz.
+
+# Amazon WorkMail
+
+Amazon WorkMail, mevcut masaüstü ve mobil e-posta istemcisi uygulamalarını destekleyen güvenli, yönetilen bir iş e-postası ve takvim hizmetidir. Amazon WorkMail, kullanıcıların e-postalarına, kişilerine ve takvimlerine, Microsoft Outlook, yerel iOS ve Android e-posta uygulamaları, IMAP protokolünü destekleyen herhangi bir istemci uygulaması veya doğrudan bir web tarayıcısı da dahil olmak üzere, seçtikleri istemci uygulamasını kullanarak sorunsuz erişebilmelerini sağlar. 
+
+E-posta hizmetidir. Office365, Google gmail gibi kurumsal e-mail altyapısıdır.
+
+# DEVELOPER TOOLS
+
+# AWS Cloud9
+
+Web tabanlı bir IDE. Yani sizin kodu yazdığınız uygulama. Tamamen web tabanlı, AWS servisleri ile entegre peer programing e imkan tanıyan oldukca yetenekli bit tool. 
+
+# AWS CodeCommit
+
+Cloud9'da yazılan kodu sakladığımız ve versiyonları yönettiğimiz servistir. Kısacası AWS dünyasının GitHub'ı dır. Bize yazdığımız yazılım kaynak kodlarını saklayacağımız bir depo hizmeti sağlıyor. 
+
+# AWS CodeBuild
+
+Kodu sakladığımız yerden alıp bunu uygulama haline getiriyor. Kodu alıyor test ediyor ve yüklenebilecek paketler haline dönüştürüyor. Yani AWS dünyasının Jenkins'i. 
+
+# AWS CodePipeline
+
+Peki bu yazdığımız kodu test sistemlerine yükleyip ordan onay alıp stageing sistemlere atıp son olarak da production'a koyma işlemlerini halleden, bunun altyapısını kurmayı, adım adım bir sistem oluşturmayı CodePipeline yapıyor.
+
+# AWS CodeDeploy
+
+CodePipeline daki oluşturulan sistemleri nihai servislere atmayı da CodeDeploy servisi gerçekleştiriyor.
+
+# AWS CodeStar
+
+Tüm bu servisleri görsel olarak oluşturup tüm süreci yöneteceğimiz bir dashboard'a sahip olmak istersek bu noktada CodeStar yardımcı oluyor. 
+
+# AWS X-Ray
+
+Tüm bu karmaşık süreçleri oluşturduğumuz bu araçlarla zor bela bir uygulama yaratıp çalışır hale getirdik diyelim. Fakat bu uygulamada bir sorun oluştu veya performans kaybı yaşıyoruz. Bu uygulamanın sorunlarını çözmek için ne yapmak gerekiyor? Bu konuda da AWS X-Ray bize yardımcı oluyor ve uygulamamızı analiz edip debug etmemizde bizlerin hayatını kolaylaştırıyor. 
+
+# MACHINE LEARNING 
+
+# Amazon SageMaker
+
+Amazon SageMaker, geliştiricilerin ve veri bilimcilerin, her ölçekte makine öğrenim modellerini hızlı ve kolay bir şekild oluşturmasına, eğitilmesine ve dağıtılmasına olanak veren tam olarak yönetilen bir platformdur. Amazon SageMaker, makine öğrenimini kullanmak isteyen geliştiricileri yavaşlatan tüm engelleri kaldırır.
+
+Yapay zeka dediğimiz şey aslında makine öğrenimi dediğimiz modeller yaratıp, bu modelleri veri ile besleyip sonucunda da bu modellerin otomatik kararlar almasını sağlamaktan ibarettir. AWS dünyasında bu modelleri çok kolay bir şekilde SageMaker ile yaratabiliyoruz. 
+
+# Amazon Comprehend
+
+Amazon Comprehend, metin içinde bilgi ve ilişkileri bulmak için makine öğrenimini kullanan doğal bir dil işleme(NLP) hizmetidir. Servis metnin dilini tanımlar; Anahtar sözcükleri, yerleri, insanları, markaları veya etkinlikleri çıkarır; Metnin ne kadar olumlu veya olumsuz olduğunu anlar; Toksikleştirmeyi ve konuşma kısımlarını kullnarak metni analiz eder; ve konuya göre otomatik olarak bir metin dosyası koleksiyonu düzenler. 
+
+Bu servise bir metni atıyorsunuz, servis bunun sonucunda size o metnin içindeki önemli bilgileri maddeler halinde çıkartıyor. 
+
+# AWS DeepLens
+
+AWS DeepLens, tam anlamıyla programlanabilir bir video kamera, öğreticiler, kod ve derin öğrenme becerilerini genişletmek için tasarlanmış eğitimli modeller ile, tam anlamıyla geliştiricilerin elinde derinlemesine öğrenmeye yardımcı olur.
+
+Makine öğrenimi ile güçlendirilmiş bir kamera. Bu kamerayı alıp örneğin mağazanıza gelen insanların kaçı erkek kaçı kadın, kaçı 18 yaş altında vb. tespitler yapabileceğiniz video tanıma uygulaması yazabilirsiniz. 
+
+# Amazon Lex
+
+Amazon Lex, ses ve yazı kullnarak herhangi bir uygulamaya konuşma arayüzleri oluşturmak için bir hizmettir. Amazon Lex, konuşmayı metne dönüştürmek için otomatik konuşma tanımanın (ASR) gelişmiş derin öğrenme işlevlerini ve metinlerin amacını tanımak için doğal dil anlayışını(NLU) kullanarak son derece ilgi çekici kullanıcı deneyimleri ve gerçeğe yakın konuşma sağlayan uygulamalar oluşturmanıza imkan tanır.
+
+AWS geçtiğimiz sene Alexa'nın arkasındaki gücü developerların hizmetine açtı. Ve bu servise Lex adını verdi. Lex ile uygulamalarınızın içerisine ses ve yazılım ile verdiğiniz komutları algılayıp buna uygun işlemler yaratabileceğiniz özellikler ekleyebiliyorsunuz. Misal e-ticaret sitenize bana 38 numara kırmızı spor ayakkabıları göster diyerek uygulamanın bunları listelemesini sağlayacak ses tanıma modülünü Lex ile çok kolay bir şekilde kurabilirsiniz.
+
+# Amazon Polly 
+
+Amazon Polly, metni gerçeğe yakın bir konuşma haline getiren bir hizmettir; konuştuğunuz uygulamaları oluşturmanızı ve tamamen yeni konuşma özellikli ürünler kategorileri oluşturmanızı sağlar. Amazon Polly, insan sesine benzeyen konuşmayı sentezlemek için gelişmiş derin öğrenme teknolojilerini kullanan bir Metin-Konuşma servisidir.
+
+Bu servise bir metin dosyası atıp onu konuşma haline çevirebiliyoruz.
+
+# Amazon Rekognition
+
+Amazon Rekognition, uygulamalarınıza görüntü ve video analizi eklemenizi kolaylaştırır. Rekognition API'sine yanlızca bir görüntü veya video sağlarsınız ve servis, nesneleri, kişileri, metinleri, sahneleri ve etkinlikleri tanımlayabilir ve uygunsuz içeriği tespit edebilir. Amazon Rekognition ayrıca sağladığınız görüntü ve videolarda son derece hassas yüz analizi ve yüz tanıma sağlar. Çok çeşitli kullanıcı doğrulama, insanlar sayma ve kamu güvenliği kullanım durumları için yüzleri tespit edebilir, analiz edebilir ve karşılaştırabilirsiniz.
+
+Makine öğreniminin en sık kullanıldığı yerlerden biri de resim ve görüntü tespit alanıdır. Uygulama ile resim ve video görüntülerini tarayıp o resim ve videoda ne olduğunu yazılımsal olarak anlayabilirsiniz. Örneğin, tamamen insansız bir marketin arkasında bunun gücü var. 
+
+# Amazon Translate
+
+Amazon Translate hızlı, yüksek kaliteli ve uygun fiyatlı dil çeviri sağlayan bir sinir makinesi çeviri hizmetidir. Sinirsel makine çevirisi, geleneksel istatistik ve kural tabanlı çeviri algoritmalarından daha doğru ve daha doğal bir ses çevirimi sağlamak için derin öğrenme modellerini kullanan bir dil çeviri otomasyonudur. Amazon Translate, uluslararası kullanıcılar için web siteleri ve uygulamar gibi içeriği yerelleştirmenize ve büyük miktarda metni verimli bir şekilde çevirmenize olanak tanır.
+
+ AWS'in çeviri hizmetidir. İki dil arasında çevrim sağlıyor. AWS'in bu servisinin artısı ise uygulamalarımızın içlerine entegre edebiliyor olmamızdır.
+
+ # INTERNET OF THINGS - IoT  - NESNELERİN İNTERNETİ
+
+ # AWS IoT Core
+
+ IoT Core ile tüm teknolojik aletlerimizin bulut servisleri ile ve birbirleri ile haberleşecekleri altyapısını kuruyoruz.
+
+ # AWS IoT Device Management
+
+ Sayısı binlere varan IoT cihazlarımızı tek bir merkezden gözleyerek yönetebiliyoruz. 
+
+ # AWS IoT Device Defender
+
+ IoT cihazlarımızı güvende tutabiliyoruz. 
+
+ # AWS IoT Analytics
+
+ IoT cihazları ile oluşturulan terabyte'larca datayı zahmetsiz şekilde analiz edebiliyoruz. 
+
+ # AWS Greengrass
+
+ AWS'in makine öğrenimi ve IoT gücünü local cihazlarımızda kullanabiliyoruz.
+
+ # AWS IoT 1-Click
+
+ Tek tıklama ile AWS Lambda fonksiyonunu tetikletebileceğimiz uygulamalar yaratabiliyoruz. 
+
+ # AWS FreeRTOS
+
+ Amazon FreeRTOS'u tamamen IoT cihazlarına özel yazılmış bir işletim sistemi olarak micro controller cihazlarımıza yükleyip diğer IoT cihazları ile kolayca entegre olmalarını sağlayabiliyoruz. 
+
+ # AR & VR - Augmented - Virtual Reality - Sanal ve Arttırılmış Gerçeklik
+
+ # Amazon Sumerian
+
+ Amazon Sumerian herhangi bir özel programlama veya 3D grafik uzmanlığı gerektirmeden sanal gerçeklik (VR), artırılmış gerçeklik (AR) ve 3D uygulamalarını hızlı ve kolay bir şekilde oluşturmanıza izin verir. Sumerian ile, Oculus Go, Oculus Rift, HTC Vive, HTC Vive Pro, Google Daydream ve Lenovo Mirage gibi popüler donanımların yanı sıra Android ve iOS mobil cihazlarda çalışan son derece etkileyici ve etkileşimli sahneler oluşturabilirsiniz. Örneğin, dünyanın her yerinden yeni çalışanlar yetiştirmenizi sağlayan sanal bir sınıf oluşturabilir veya insanların bir binayı uzaktan gezmelerine olanak tanıyan bir sanal ortam oluşturabilirsiniz.
+
+ Sumerian nesnelerin örneğin karakter, mobilya veya manzara eklenmesini ve tasarlanmasını, canlandırılması ve komut dosyası oluşturma ortamları dahil olmak üzere son derece sürükleyici ve etkileşimli 3D deneyimleri oluşturmak için gereken yapı taşlarını oluşturmayı kolaylaştırır. Dogrudan tarayıcınızdan sahneler tasarlayabilirsiniz. 
+
+ # GAME DEVELOPMENT
+
+ # Amazon GameLift
+
+ Kabul edelim, sunucu altyapısı, çok oyunculu oyununuzu rezil de edebilir vezir de. Güvenilir oyun deneyimleri sağlamadan, oyuncular başka bir yere gideceklerdir. Amazon GameLift'in devreye girdiği yer burası. Bulutta barınan özel oyun sunucusu, gecikmeyi ve bekleme süresini en aza indirgemek ve maliyet tasarruflarını en üst düzeye çıkarmak için yaratıldı.
+
+ Multiplayer dediğimiz bir çok oyuncunun bağlanıp aynı anda aynı oyunu oynadığı oyunların yaratıcılarının en dikkat etmesi gereken şey oyunculara kesintisiz bir oyun deneyimi sunmaktır. AWS bunun sunucu kısmını zahmetsiz oluşturmak adına oyun stüdyolarına GameLift servisini sundu ve AWS'in bulut gücünü kullanma imkanı tanıdı.
+
+ # RELNVENT 2018 SERVİSLERİ
+
+ # Amazon Timestream
+
+ Amazon Timestream, IoT ve operasyonel uygulamar için günlük trilyonlarca olayın ilişkisel veritabanlarının maliyetlerini 1/10'u maliyetinde depolanmasını ve analiz edilmesini kolaylaştıran hızlı, ölçeklenebilir, tam olarak yönetilen bir zaman serisi veritabanı hizmetidir. IoT cihazlarının, BT sistemlerinin ve akıllı endüstriyel makinelerin yükselişine bağlı olarak, zaman serisi veriler - zaman içinde işlerin nasıl değiştiğini ölçen veriler - en hızlı büyüyen veri türlerinden biridir. Zaman serisi verileri, genellikle zaman sipariş formuna ulaşma, veriler her zaman bir zaman aralığı içinde olma gibi velirli özelliklere sahiptir.
+
+ Yeni bir databse çeşitidir. Temel de NoSQL tabanlıdır. Ama tamamen zaman akışlı dataya özelleşmiş durumda. Kaydın zamanının önemli olduğu ve sorgunun zaman a göre yapıldığı durumlarda işimize yarayacak bir veritabanıdır.
+
+ # Amazon Texttract
+
+ Amazon Texttract, taranan belgelerden otomatik olarak metin ve veri ayıklayan bir hizmettir. Amazon Texttract, formlardaki alanların içeriğini ve tablolarda depolanan bilgilerin tanımlanması için basit optik karakter tanımlamanın (OCR) ötesine geçer. 
+
+ Aslında Rekognition servisinin bir uzantısı olarak devreye alındı. Yıllardır kullandığımız OCR hizmetinin AWS dünyasındaki halidir. Örneğin bir kitabı tarayın ve bu servise atın. Bu servis size o kitabı text dosya olarak sunacaktır. 
+
+ # AWS Managed Blockchain
+
+ Amazon Managed Blockchain, popüler açık kaynak kodlu çerçeveleri Hyperledger Fabric ve Ethereum  kullanarak ölçeklenebilir blok zinrici ağları oluşturmayı ve yönetmeyi kolaylaştıran tamamen yönetilen bir hizmettir.
+
+# Amazon Deepracer
+
+Amazon DeepRacer, kelimenin tam anlamıyla makine öğrenimi ile yuvarlanmanın en hızlı yoludur. Takviye öğrenme, 3D yarış simülatörü ve dünya yarış liginin yönlendirdiği, tamamen bağımsız, 1/18 ölçekli bir yarış arabasıyla pratik olun.
+
+Makine öğrenimi ile ilgilenen tüm developerların bir numaralı hayali kendi kendine giden bir araba inşaa etmektir. Amazon DeepRacer ile bunu gerçekleştirme şansına eriştik. Programlanabilir, 1/18 ölçekli uzaktan kumandalı bir araba. Amazon sizden bunu programlayarak kendi kendine gitmesini sağlamanızı ve ardından yarıştırmanızı istiyor. 
+
+
+
+
+
+
+
+
+
+
+
